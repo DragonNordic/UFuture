@@ -1,0 +1,186 @@
+.purple-bg {
+  background: url(../../src/img/purple-bg.png) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+.bg-transparent--wrapper {
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 8%;
+  overflow: hidden;
+
+  @media screen and (max-width: 800px){
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+}
+
+.bg-transparent-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 170px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  opacity: 0.1;
+  -webkit-text-stroke: 1px #FFFFFF;
+  overflow: hidden;
+  //text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  //text-shadow: 0 0 1px #000;
+  color: transparent;
+
+  @media screen and (max-width: 1100px){
+    font-size: 160px;
+    line-height: 200px;
+  }
+
+  @media screen and (max-width: 800px){
+    font-size: 120px;
+    line-height: 160px;
+  }
+
+  @media screen and (max-width: 650px){
+    margin-top: 10%;
+    font-size: 90px;
+    line-height: 100px;
+  }
+
+  @media screen and (max-width: 450px){
+    font-size: 65px;
+  }
+}
+
+
+.main-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 63px;
+  line-height: 111%;
+  color: #fff;
+
+  @media screen and (max-width: 1500px){
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 900px){
+    font-size: 38px;
+  }
+
+  @media screen and (max-width: 550px){
+    font-size: 32px;
+  }
+
+  span {
+    color: #FFC149;
+  }
+}
+
+.subtitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #FFFFFF;
+  opacity: 0.7;
+
+  @media screen and (max-width: 1500px){
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 900px){
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 550px){
+    font-size: 10px;
+  }
+
+}
+
+.section--wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  position: relative;
+}
+
+.section--contrainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.section__title {
+  margin: 0;
+  white-space: nowrap;
+  max-width: 100%;
+
+}
+
+.bg--wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.submit--button {
+  height: 71px;
+  width: 246px;
+  border-radius: 76px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, .3);
+  margin: auto 15px;
+
+  @media screen and (max-width: 768px) {
+    height: 55px;
+  }
+}
+
+.pink--button {
+  border: none;
+  opacity: 1;
+  background: linear-gradient(90deg, #FF0E74 0%, #FF5B8B 100%);
+  box-shadow: 7px 7px 18px rgba(35, 14, 61, 0.2);
+}
+
+.submit--container {
+  display: inline-flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.submit--text {
+  margin-left: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.submit-btn--wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}

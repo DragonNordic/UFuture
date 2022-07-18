@@ -1,0 +1,143 @@
+<section id="section3" class="section purple-bg our-mission__section">
+
+    <div class="about__title--container mission__title--container">
+        <div class="bg-transparent--wrapper section__title ">
+            <div class="bg--wrapper">
+                <h3 class="bg-transparent-title section__title mission__transparent-title">What we do</h3>
+                <h3 class="main-title about--title mission__title">
+                    Our mission
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="mission__buttons--wrapper">
+        <div class="mission__button--container">
+            <button id="mission-button-1" class="mission__button" data-target="mission-content-1">
+                <img src="../src/img/humanitarian.svg" alt="">
+                Humanitarian aid to refugees
+            </button>
+            <button id="mission-button-2" class="mission__button mission__button--active" data-target="mission-content-2">
+                <img src="../src/img/social.svg" alt="">
+                Social projects
+            </button>
+            <button id="mission-button-3" class="mission__button" data-target="mission-content-3">
+                <img src="../src/img/army.svg" alt="">
+                Assistance to hospitals and the army
+            </button>
+        </div>
+    </div>
+
+
+    <div id="mission-content-1" class="mission__content--container">
+        <div class="mission__content__left--container">
+            <img src="../src/img/humanitarian-aid.png" alt="">
+        </div>
+
+        <div class="mission__content__right--container">
+            <h3 class="mission__subtitle">Humanitarian aid to refugees</h3>
+            <p class="mission__text">Our assistance provides urgent, life-saving support, including food, shelter, safe drinking water, improved sanitation and hygiene, emergency.</p>
+            <p class="mission__text mission__text-strong">Emergency healthcare services, child protection programs, and education, among other activities:</p>
+            <ul class="mission__list">
+                <li class="mission__list-item">Including food, shelter, safe drinking water, improved. </li>
+                <li class="mission__list-item">Provides resources and networking opportunities for past. </li>
+                <li class="mission__list-item">Find exchange programs for both domestic and foreign audiences. </li>
+            </ul>
+            <div class="submit-btn--wrapper">
+                <a href="/documents">
+                    <button class="submit--button pink--button about__submit" type="button">
+                            <span class="submit--container">
+                                <img src="../src/img/heart.svg" alt="">
+                                <span class="submit--text">Documents</span>
+                            </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="mission-content-2" class="mission__content--container mission__content--active">
+        <div class="mission__content__left--container">
+            <img src="../src/img/humanitarian-aid.png" alt="">
+        </div>
+
+        <div class="mission__content__right--container">
+            <h3 class="mission__subtitle">Social projects</h3>
+            <p class="mission__text">Our assistance provides urgent, life-saving support, including food, shelter, safe drinking water, improved sanitation and hygiene, emergency.</p>
+            <p class="mission__text mission__text-strong">Emergency healthcare services, child protection programs, and education, among other activities:</p>
+            <ul class="mission__list">
+                <li class="mission__list-item">Including food, shelter, safe drinking water, improved. </li>
+                <li class="mission__list-item">Provides resources and networking opportunities for past. </li>
+                <li class="mission__list-item">Find exchange programs for both domestic and foreign audiences. </li>
+            </ul>
+            <div class="submit-btn--wrapper">
+                <a href="/documents">
+                    <button class="submit--button pink--button about__submit" type="button">
+                            <span class="submit--container">
+                                <img src="../src/img/heart.svg" alt="">
+                                <span class="submit--text">Documents</span>
+                            </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="mission-content-3" class="mission__content--container">
+        <div class="mission__content__left--container">
+            <img src="../src/img/humanitarian-aid.png" alt="">
+        </div>
+
+        <div class="mission__content__right--container">
+            <h3 class="mission__subtitle">Assistance to hospitals and the army</h3>
+            <p class="mission__text">Our assistance provides urgent, life-saving support, including food, shelter, safe drinking water, improved sanitation and hygiene, emergency.</p>
+            <p class="mission__text mission__text-strong">Emergency healthcare services, child protection programs, and education, among other activities:</p>
+            <ul class="mission__list">
+                <li class="mission__list-item">Including food, shelter, safe drinking water, improved. </li>
+                <li class="mission__list-item">Provides resources and networking opportunities for past. </li>
+                <li class="mission__list-item">Find exchange programs for both domestic and foreign audiences. </li>
+            </ul>
+            <div class="submit-btn--wrapper">
+                <a href="/documents">
+                    <button class="submit--button pink--button about__submit" type="button">
+                            <span class="submit--container">
+                                <img src="../src/img/heart.svg" alt="">
+                                <span class="submit--text">Documents</span>
+                            </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="about__decor--wrapper mission__decor">
+        <div class="decor__items--container">
+            <span class="decor__blue decor__large mission__decor__blue--large"></span>
+            <span class="decor__blue decor__small mission__decor__blue--small"></span>
+            <span class="decor__orange mission__decor__orange"></span>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    const buttons = document.querySelectorAll(".mission__button");
+    const divs = document.querySelectorAll(".mission__content--container");
+    buttons.forEach( ( btn, index ) => {
+        btn.addEventListener('click',  function checkInfo(button) {
+            setActiveElement(buttons, index, this, 'mission__button--active');
+            setActiveElement(divs, index, this, 'mission__content--active');
+
+            document.getElementById(this.dataset.target).classList.add("mission__content--active");
+        });
+    }) ;
+
+    function setActiveElement(array, index, context, className) {
+        array.forEach( (item, itemIndex) => {
+            index !== itemIndex
+                ? item.classList.remove(className)
+                : context.classList.add(className);
+        })
+    }
+
+</script>
