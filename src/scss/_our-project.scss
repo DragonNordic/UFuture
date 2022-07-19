@@ -1,0 +1,18 @@
+body {
+    background-color: transparent;
+}
+
+.our-project {
+
+    &__container {
+        max-width: 780px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 50px;
+        text-transform: uppercase;
+
+
+    }
+}
