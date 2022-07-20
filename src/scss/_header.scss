@@ -5,22 +5,15 @@
     padding: 0;
 }
 
-body {
-    background-color: #6B37A9;
-}
-
 .header {
     padding: 0 1.7rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid $border-color;
+    background-color: $bgc-color;
 
     &__wrapper {
         background: transparent;
         width: 100%;
     }
-}
-
-.filled {
-    fill: white;
 }
   
 .nav {
@@ -30,7 +23,7 @@ body {
 
     &__logo {
         path {
-            fill:white;
+            fill:$logo-color;
         }
         
         &:hover path {
@@ -46,7 +39,6 @@ body {
     &__menu-block {
         @include flex-center();
         padding-top: 20px;
-        // flex-direction: row;
     }
 
     &__item {
@@ -57,6 +49,7 @@ body {
 
         & svg {
             margin-right: 10px;
+            fill: #FFC149;
         }
 
         &--first {
@@ -89,16 +82,16 @@ body {
         font-weight: 400;
         opacity: 70%;
         text-decoration: none;
-        color: #fff;
+        color: $text-color;
 
         &--top-border {
             border-radius: 10px 10px 0 0;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $language-color;
         }
 
         &--bottom-border {
             border-radius: 0 0 10px 10px;
-            border-top: 1px solid black;
+            border-top: 1px solid $language-color;
         }
     }
 
@@ -109,6 +102,10 @@ body {
 
         &__button svg {
             margin-left: 7px;
+
+            & path {
+                fill: $text-color;
+            }
         }
      
         &__dropdown {
@@ -119,8 +116,8 @@ body {
             
             & a {
                 opacity: 100%;
-                background-color: #fff;
-                color: #000;
+                background-color: $language-bgc;
+                color: $language-color;
                 padding: 20px;
                 text-decoration: none;
                 display: block;
@@ -144,6 +141,14 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
+
+        &:hover {
+            background: linear-gradient(90deg, #F28D1C 0%, #FBC658 100%);
+       
+            .nav__link svg {
+                fill: #FF0E74;
+            }
+        }
     }
 
     &__toggle-btn {
@@ -276,7 +281,6 @@ body {
     .nav {
         &__menu {
             position: fixed;
-            width: 65%;
             height: 100%;
             right: -100%;
         }

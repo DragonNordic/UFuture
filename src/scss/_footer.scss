@@ -34,9 +34,7 @@
 
         &__nav {
             flex-direction: row;
-        }
-
-        
+        }   
     }
 
     &__nav-section {
@@ -47,6 +45,20 @@
 
     &__nav-icon path {
         fill: white;
+    }
+}
+
+.nav__link--footer {
+    color: #fff;
+}
+
+.nav__logo--footer {
+    path {
+        fill: white;
+    }
+    
+    &:hover path {
+        fill: #FFC149;
     }
 }
 

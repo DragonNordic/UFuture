@@ -1254,8 +1254,8 @@ img {
 
 .header {
   padding: 0 1.7rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: #6B37A9;
+  border-bottom: 1px solid #dfdedd;
+  background-color: transparent;
 }
 .header__wrapper {
   background: transparent;
@@ -1270,7 +1270,7 @@ img {
   padding: 20px;
 }
 .nav__logo path {
-  fill: #fff;
+  fill: #6B37A9;
 }
 .nav__logo:hover path {
   fill: #FFC149;
@@ -1325,15 +1325,15 @@ img {
   font-weight: 400;
   opacity: 70%;
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 .nav__link--top-border {
   border-radius: 10px 10px 0 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
 }
 .nav__link--bottom-border {
   border-radius: 0 0 10px 10px;
-  border-top: 1px solid #000;
+  border-top: 1px solid #fff;
 }
 .nav .language {
   position: relative;
@@ -1344,7 +1344,7 @@ img {
   margin-left: 7px;
 }
 .nav .language__button svg path {
-  fill: #fff;
+  fill: #000;
 }
 .nav .language__dropdown {
   display: none;
@@ -1354,8 +1354,8 @@ img {
 }
 .nav .language__dropdown a {
   opacity: 100%;
-  background-color: #fff;
-  color: #000;
+  background-color: #6B37A9;
+  color: #fff;
   padding: 20px;
   text-decoration: none;
   display: block;
@@ -1639,4 +1639,4 @@ body {
   margin-right: 15px;
   line-height: 24px;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=our-index.css.map */
