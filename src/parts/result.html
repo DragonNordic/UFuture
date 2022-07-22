@@ -1,3 +1,177 @@
 <section id="section4" class="section">
-    <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+    <div class="about__title--container">
+        <div class="bg-transparent--wrapper section__title ">
+            <div class="bg--wrapper">
+                <h3 class="bg-transparent-title section__title" style="-webkit-text-stroke: 1px #2B251E;">Who we are</h3>
+                <h3 class="main-title about--title" style="color: #000">
+                    Result of our work
+                </h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="result__slider--container">
+        <h3 class="result__subtitle">Photo gallery</h3>
+
+        <div class="image-slider--wrapper">
+            <div class="review-carousel" >
+                <div class="image-slider__slide--container">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                    <div class="slider__foreground--container">
+                        <p class="slider__foreground__text">Emergency healthcare services, child protection programs, and education</p>
+                    </div>
+                </div>
+
+                <div class="image-slider__slide--container">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                    <div class="slider__foreground--container">
+                        <p class="slider__foreground__text">protection programs, and education</p>
+                    </div>
+                </div>
+
+                <div class="image-slider__slide--container">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                    <div class="slider__foreground--container">
+                        <p class="slider__foreground__text">protection programs, and education</p>
+                    </div>
+                </div>
+
+                <div class="image-slider__slide--container">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                    <div class="slider__foreground--container">
+                        <p class="slider__foreground__text">protection programs, and education</p>
+                    </div>
+                </div>
+
+                <div class="image-slider__slide--container">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                    <div class="slider__foreground--container">
+                        <p class="slider__foreground__text">protection programs, and education</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slider-nav" >
+                <div class="image-slider__slide--container slider-nav__slide">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                    <div class="slider__foreground--container">
+                        <p class="slider__foreground__text">Emergency healthcare services, child protection programs, and education</p>
+                    </div>
+                </div>
+
+                <div class="image-slider__slide--container slider-nav__slide">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                    <div class="slider__foreground--container">
+                        <p class="slider__foreground__text">protection programs, and education</p>
+                    </div>
+                </div>
+
+                <div class="image-slider__slide--container slider-nav__slide">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                    <div class="slider__foreground--container">
+                        <p class="slider__foreground__text">protection programs, and education</p>
+                    </div>
+                </div>
+
+                <div class="image-slider__slide--container slider-nav__slide">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                    <div class="slider__foreground--container">
+                        <p class="slider__foreground__text">protection programs, and education</p>
+                    </div>
+                </div>
+
+                <div class="image-slider__slide--container slider-nav__slide">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                    <div class="slider__foreground--container">
+                        <p class="slider__foreground__text">protection programs, and education</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+            <span class="slider__label sr-only"></span>
+        </div>
+        
+<!--        <div class="br"></div>-->
+    </div>
+
 </section>
+
+<script>
+    $(document).ready(function(){
+
+
+        $('.slider-nav').on('init', () => {
+            let navWidth = $('.slider-nav').width();
+            console.log(navWidth);
+            $('.slick-next').css('right', '-' + navWidth + 'px');
+        });
+
+
+        function setProgressWidth(event, slick, currentSlide, nextSlide) {
+            const lenght = 100 / (slick.slideCount - 1);
+            const position = lenght * nextSlide;
+            $('.progress')
+                .css('background-size', lenght + '%')
+                .css('background-position', position + '%');
+        }
+
+        $('.review-carousel').on('init', setProgressWidth);
+        $('.review-carousel').on('beforeChange', setProgressWidth);
+
+        $('.review-carousel').slick({
+            lazyLoad: "ondemand",
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            autoplay: false,
+            autoplaySpeed: 5000,
+            asNavFor: '.slider-nav',
+
+            // responsive: [
+            //     {
+            //         breakpoint: 1440,
+            //         settings: {
+            //             slidesToShow: 5,
+            //             slidesToScroll: 1,
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 1024,
+            //         settings: {
+            //             slidesToShow: 2,
+            //             slidesToScroll: 1,
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 768,
+            //         settings: {
+            //             slidesToShow: 3,
+            //             slidesToScroll: 1,
+            //             arrows: false
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 480,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: 1
+            //         }
+            //     }
+            // ],
+        });
+
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.review-carousel',
+            dots: false,
+            vertical: true,
+            arrows: false,
+            focusOnSelect: true
+        });
+    });
+</script>
