@@ -5,12 +5,11 @@
     color: transparent;
     white-space: nowrap;
 }
-  
+
 .popup {
     position: fixed;
     left: 0;
     top: 0;
-    height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     visibility: hidden;
@@ -19,6 +18,11 @@
         opacity: 1;
         visibility: visible;
         z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        overflow-y: scroll;
     }
 
     &__headling {
@@ -87,13 +91,14 @@
         position: relative;
         width: 90%;
         max-width: 590px;
-        margin: 4em auto;
+        margin: 0;
         background: #FFF;
         border-radius: 10px;
         text-align: center;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         padding-bottom: 35px;
-
+        height: 100vh;
+        overflow: scroll;
         & .popup__close {
             position: absolute;
             top: 8px;
@@ -123,9 +128,7 @@
         }
 
         @media only screen and (min-width: 1170px) {
-            margin: 8em auto;
         }
     }
 }
-  
-  
+

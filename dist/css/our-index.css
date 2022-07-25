@@ -190,11 +190,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 @media screen and (max-width: 600px) {
   .submit-btn--wrapper {
     flex-direction: column;
   }
+}
+
+.br {
+  width: 100%;
+  height: 0;
+  opacity: 0.1;
+  border: 1px solid #17151C;
 }
 
 .hero--container {
@@ -1110,6 +1118,14 @@ img {
   height: auto;
 }
 
+.contact-info--wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
 .contact-info--container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1118,10 +1134,27 @@ img {
   margin: 0 auto;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 15px;
+  cursor: pointer;
 }
 
-.contact-info__item--container {
+.contact-info--container .contact-info__item--container {
   height: 255px;
+  transition: 0.2s all;
+}
+.contact-info--container .contact-info__item--container a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10%;
+  height: 100%;
+}
+@media screen and (max-width: 1250px) {
+  .contact-info--container .contact-info__item--container a {
+    padding: 7%;
+  }
+}
+.contact-info--container .contact-info__item--container:first-child {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1129,8 +1162,55 @@ img {
   padding: 10%;
 }
 @media screen and (max-width: 1250px) {
-  .contact-info__item--container {
+  .contact-info--container .contact-info__item--container:first-child {
     padding: 7%;
+  }
+}
+.contact-info--container .contact-info__item--container:hover {
+  border: 1px solid #FFC149;
+  border-bottom: 5px solid #FFC149;
+}
+.contact-info--container .contact-info__item--container:first-child:hover {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.contact-info--container .contact-info__item--container:last-child:hover {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+@media screen and (max-width: 1024px) {
+  .contact-info--container .contact-info__item--container:first-child:hover {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .contact-info--container .contact-info__item--container:nth-child(2):hover {
+    border-top-right-radius: 15px;
+  }
+  .contact-info--container .contact-info__item--container:nth-child(3):hover {
+    border-bottom-left-radius: 15px;
+  }
+  .contact-info--container .contact-info__item--container:last-child:hover {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 15px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .contact-info--container .contact-info__item--container:first-child:hover {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+  }
+  .contact-info--container .contact-info__item--container:nth-child(2):hover {
+    border-top-right-radius: 0px;
+  }
+  .contact-info--container .contact-info__item--container:nth-child(3):hover {
+    border-bottom-left-radius: 0px;
+  }
+  .contact-info--container .contact-info__item--container:last-child:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 }
 
@@ -1652,7 +1732,6 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   visibility: hidden;
@@ -1661,6 +1740,11 @@ body {
   opacity: 1;
   visibility: visible;
   z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  overflow-y: scroll;
 }
 .popup__headling {
   font-size: 50px;
@@ -1722,12 +1806,14 @@ body {
   position: relative;
   width: 90%;
   max-width: 590px;
-  margin: 4em auto;
+  margin: 0;
   background: #FFF;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding-bottom: 35px;
+  height: 100vh;
+  overflow: scroll;
 }
 .popup__container .popup__close {
   position: absolute;
@@ -1752,10 +1838,5 @@ body {
 .popup__container .popup__close::after {
   transform: rotate(-45deg);
   right: 8px;
-}
-@media only screen and (min-width: 1170px) {
-  .popup__container {
-    margin: 8em auto;
-  }
 }
 /*# sourceMappingURL=our-index.css.map */
