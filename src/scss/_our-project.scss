@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+body {
+    background-color: transparent;
+}
+
+* {
+    font-family: 'Montserrat';
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    color: #8b8a8d;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 10%;
+
+    & span {
+        color: #000;
+    }
+
+    &__margin {
+        margin-bottom: 40px;
+    }
+}
+
+.our-project {
+
+    &__container {
+        max-width: 780px;
+        margin: 0 auto;
+    }
+
+    &__banner {
+        max-width: 1060px;
+        margin: 40px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: 50px;
+        text-transform: uppercase;
+        margin: 70px 0 20px;
+        color: #000;
+    }
+
+    &__sub-title {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #000;
+        line-height: 30px;
+        margin: 40px 0 20px;
+    }
+
+    &__list {
+        list-style: inside;
+
+        & li::marker {
+            color: #1884FA;
+        }
+    }
+
+    &__bold {
+        margin: 20px 0 20px;
+        font-weight: 600;
+    }
+
+    &__numbered-list {
+        margin: 20px 0 100px;
+        list-style: none;
+        counter-reset: my-awesome-counter;
+
+        & li {
+            counter-increment: my-awesome-counter;
+            margin-bottom: 10px;
+
+            &::before {
+                content: "0" counter(my-awesome-counter) ".";
+                font-weight: bold;
+                font-size: 16px;
+                color: #1884FA;
+                margin-right: 15px;
+                line-height: 24px;
+            }  
+        }
+    }
+}
