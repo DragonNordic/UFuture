@@ -205,6 +205,10 @@
   border: 1px solid #17151C;
 }
 
+#section4 {
+  background-color: white;
+}
+
 .hero--container {
   position: absolute;
   top: 0;
@@ -1325,6 +1329,11 @@ img {
 .contact__decor__orange {
   right: 5%;
   bottom: 15%;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
 }
 
 * {
