@@ -22,7 +22,9 @@
         align-items: center;
         justify-content: center;
         padding: 1em;
-        overflow-y: scroll;
+        
+        background: rgba(0,0,0,0.7);
+        height: 100vh;
     }
 
     &__headling {
@@ -45,6 +47,21 @@
 
         span:first-child {
             white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            @media only screen and (min-width: 500px) {
+                overflow: visible;
+                text-overflow: unset;
+            }
+        }
+
+        span svg {
+            fill: #3676F7;
+
+            &:hover {
+                fill: #FFC149;
+            }
         }
 
         &--bold {
@@ -87,6 +104,7 @@
         }
     }
 
+
     &__container {
         position: relative;
         width: 90%;
@@ -95,10 +113,12 @@
         background: #FFF;
         border-radius: 10px;
         text-align: center;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         padding-bottom: 35px;
         height: 100vh;
-        overflow: scroll;
+        max-height: 800px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
         & .popup__close {
             position: absolute;
             top: 8px;

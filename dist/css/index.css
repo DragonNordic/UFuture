@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 .purple-bg {
   background: url(../../src/img/purple-bg.png) no-repeat center center fixed;
   background-size: cover;
@@ -694,6 +693,14 @@ img {
 .hero__decor__blue--small {
   top: 70%;
   left: 55%;
+}
+
+#section1 {
+  z-index: -1;
+}
+
+.mr0 {
+  margin-right: 0 !important;
 }
 
 .image-mask--container {
@@ -1666,6 +1673,14 @@ img {
   background: transparent;
   width: 100%;
 }
+.header__link-span {
+  display: none;
+}
+@media screen and (min-width: 1800px) {
+  .header__link-span {
+    display: inline-block;
+  }
+}
 
 .nav {
   display: flex;
@@ -1691,14 +1706,37 @@ img {
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (min-width: 1024px) {
+  .nav__menu-block {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.nav__menu-icons {
+  flex-direction: row;
 }
 .nav__item {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
-  margin-right: 35px;
   list-style: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+@media screen and (min-width: 1024px) {
+  .nav__item {
+    margin: 1rem 35px;
+  }
+  .nav__item--dotted {
+    margin-right: 0;
+  }
+  .nav__item:last-child {
+    margin-right: 0 !important;
+  }
 }
 .nav__item svg {
   margin-right: 10px;
@@ -1719,18 +1757,33 @@ img {
     color: #FFC149;
     display: flex;
     justify-content: center;
+    width: 20px;
+  }
+}
+@media screen and (min-width: 1550px) {
+  .nav__item--dotted::before {
     width: 50px;
   }
 }
 .nav__link {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 19.5px;
   letter-spacing: 0.5px;
   font-weight: 400;
   opacity: 70%;
   text-decoration: none;
   color: #fff;
+  transition: 0.3s color ease;
+}
+.nav__link:hover {
+  color: #35c5ff;
+  transition: 0.3s color ease;
+}
+@media screen and (min-width: 1550px) {
+  .nav__link {
+    font-size: 16px;
+  }
 }
 .nav__link--top-border {
   border-radius: 10px 10px 0 0;
@@ -1779,12 +1832,18 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.4s ease;
 }
 .nav__button:hover {
   background: linear-gradient(90deg, #F28D1C 0%, #FBC658 100%);
+  transition: all 0.4s ease;
 }
-.nav__button:hover .nav__link svg {
+.nav__button:hover svg path {
   fill: #FF0E74;
+  transition: all 0.4s ease;
 }
 .nav__toggle-btn {
   font-size: 20px;
@@ -1817,7 +1876,7 @@ img {
   display: block;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .nav__toggle-btn {
     display: none;
   }
@@ -1835,6 +1894,8 @@ img {
 }
 @media screen and (max-width: 1024px) {
   .nav__menu {
+    overflow-y: scroll;
+    overflow-x: hidden;
     position: absolute;
     width: 80%;
     height: 100%;
@@ -1853,31 +1914,16 @@ img {
     align-items: flex-start;
     margin-top: 4rem;
   }
-  .nav__menu-block {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav__item {
-    margin: 1rem 0;
-  }
-}
-@media screen and (max-width: 1024px) and (min-width: 1024px) {
-  .nav__item {
-    margin: 1rem 35px;
-  }
-}
-@media screen and (max-width: 1024px) {
   .nav__item--dotted {
     margin-right: 0;
   }
-}
-@media screen and (max-width: 1024px) {
+  .nav__item:last-child {
+    margin-right: 0 !important;
+  }
   .nav__link--menu {
     font-size: 18px;
     color: black;
   }
-}
-@media screen and (max-width: 1024px) {
   .nav__close-btn {
     display: block;
     position: absolute;
@@ -1890,8 +1936,7 @@ img {
   .nav__close-btn:hover {
     color: #000;
   }
-}
-@media screen and (max-width: 1024px) {
+
   .wrapper {
     padding: 0 0.7rem;
   }
@@ -1972,79 +2017,6 @@ img {
   }
 }
 
-body {
-  background-color: transparent;
-}
-
-* {
-  font-family: "Montserrat";
-}
-
-.breadcrumbs {
-  font-size: 14px;
-  color: #8b8a8d;
-  font-weight: 500;
-  text-decoration: none;
-  margin-left: 10%;
-}
-.breadcrumbs span {
-  color: #000;
-}
-.breadcrumbs__margin {
-  margin-bottom: 40px;
-}
-
-.our-project__container {
-  max-width: 780px;
-  margin: 0 auto;
-}
-.our-project__banner {
-  max-width: 1060px;
-  margin: 40px auto;
-  display: flex;
-  justify-content: center;
-}
-.our-project__title {
-  font-size: 50px;
-  text-transform: uppercase;
-  margin: 70px 0 20px;
-  color: #000;
-}
-.our-project__sub-title {
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #000;
-  line-height: 30px;
-  margin: 40px 0 20px;
-}
-.our-project__list {
-  list-style: inside;
-}
-.our-project__list li::marker {
-  color: #1884FA;
-}
-.our-project__bold {
-  margin: 20px 0 20px;
-  font-weight: 600;
-}
-.our-project__numbered-list {
-  margin: 20px 0 100px;
-  list-style: none;
-  counter-reset: my-awesome-counter;
-}
-.our-project__numbered-list li {
-  counter-increment: my-awesome-counter;
-  margin-bottom: 10px;
-}
-.our-project__numbered-list li::before {
-  content: "0" counter(my-awesome-counter) ".";
-  font-weight: bold;
-  font-size: 16px;
-  color: #1884FA;
-  margin-right: 15px;
-  line-height: 24px;
-}
-
 .img-replace {
   display: inline-block;
   overflow: hidden;
@@ -2069,7 +2041,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1em;
-  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
 }
 .popup__headling {
   font-size: 50px;
@@ -2090,6 +2063,20 @@ body {
 }
 .popup__text span:first-child {
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media only screen and (min-width: 500px) {
+  .popup__text span:first-child {
+    overflow: visible;
+    text-overflow: unset;
+  }
+}
+.popup__text span svg {
+  fill: #3676F7;
+}
+.popup__text span svg:hover {
+  fill: #FFC149;
 }
 .popup__text--bold {
   font-weight: 600;
@@ -2135,10 +2122,11 @@ body {
   background: #FFF;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding-bottom: 35px;
   height: 100vh;
-  overflow: scroll;
+  max-height: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .popup__container .popup__close {
   position: absolute;

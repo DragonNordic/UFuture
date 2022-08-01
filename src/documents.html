@@ -1,0 +1,91 @@
+//= parts/white-header.html
+
+<div class="breadcrumbs__margin"></div>
+<a href="../dist/index.html" class="breadcrumbs">
+    Home / <span>Documents</span>
+</a>
+
+<section>
+    <div class="about__title--container documents__title">
+        <div class="bg-transparent--wrapper section__title ">
+            <div class="bg--wrapper">
+                <h3 class="bg-transparent-title section__title" style="-webkit-text-stroke: 1px #2B251E;">permission</h3>
+                <h3 class="main-title about--title" style="color: #000">
+                    Documents
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="documents__slider-container">
+        <div class="documents__slider-wrapper">
+            <div class="review-carousel documents__carousel">
+                <div class="image-slider__slide--container">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                </div>
+                <div class="image-slider__slide--container">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                </div>
+                <div class="image-slider__slide--container">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                </div>
+                <div class="image-slider__slide--container">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                </div>
+                <div class="image-slider__slide--container">
+                    <img src="https://via.placeholder.com/1920" alt="">
+                </div>
+            </div>
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+            <span class="slider__label sr-only"></span>
+        </div>
+    </div>
+</section>
+
+<script>
+    
+    $(document).ready(function(){
+
+
+    $('.slider-nav').on('init', () => {
+        let navWidth = $('.slider-nav').width();
+        console.log(navWidth);
+        $('.slick-next').css('right', '-' + navWidth + 'px');
+    });
+
+
+    function setProgressWidth(event, slick, currentSlide, nextSlide) {
+        const lenght = 100 / (slick.slideCount - 1);
+        const position = lenght * nextSlide;
+        $('.progress')
+            .css('background-size', lenght + '%')
+            .css('background-position', position + '%');
+    }
+
+    $('.review-carousel').on('init', setProgressWidth);
+    $('.review-carousel').on('beforeChange', setProgressWidth);
+
+    $('.review-carousel').slick({
+        lazyLoad: "ondemand",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        autoplay: false,
+        autoplaySpeed: 5000
+    });
+
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        vertical: true,
+        arrows: false,
+        focusOnSelect: true
+    });
+    });
+
+</script>
+
+//= parts/footer.html
+
+//= parts/pop-up.html
