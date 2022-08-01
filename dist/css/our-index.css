@@ -1970,6 +1970,17 @@ img {
     right: -100%;
   }
 }
+@media screen and (min-width: 1800px) {
+  .nav__item {
+    margin: 1rem 10px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .nav__item {
+    margin: 1rem 20px;
+  }
+}
+
 .footer__wrapper {
   background: linear-gradient(103.4deg, #271D4E 0%, #37165F 100%);
 }

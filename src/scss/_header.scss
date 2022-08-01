@@ -23,7 +23,7 @@
         }
     }
 }
-  
+
 .nav {
     @include flex-center();
     justify-content: space-between;
@@ -332,4 +332,13 @@
             right: -100%;
         }
     }
-}  
+}
+
+.nav__item {
+    @media screen and (min-width: 1800px) {
+        margin: 1rem 10px;
+    }
+    @media screen and (min-width: 2000px) {
+        margin: 1rem 20px;
+    }
+}
