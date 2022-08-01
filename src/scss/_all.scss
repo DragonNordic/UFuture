@@ -140,11 +140,42 @@
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, .3);
   margin: auto 15px;
+  transition: .1s ease;
+
+  span {
+    svg path {
+
+      transition: fill .3s ease;
+    }
+  }
+
 
   @media screen and (max-width: 768px) {
     height: 55px;
   }
 }
+
+.submit--button:hover {
+  background: linear-gradient(90deg, #F28D1C 0%, #FBC658 100%);
+
+  span .submit__heart {
+    path {
+      fill: #FF0E74;
+    }
+  }
+}
+
+.submit--button:active {
+  background: #F28D1C;
+
+  .submit__heart {
+    path {
+      fill: #FF0E74;
+    }
+  }
+}
+
+
 
 .pink--button {
   border: none;
