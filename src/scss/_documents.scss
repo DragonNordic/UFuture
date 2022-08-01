@@ -1,0 +1,26 @@
+.section-documents {
+    min-height: 100%;
+    position: relative;
+    padding: 2em 0;
+}
+
+.documents {
+
+    &__title {
+        margin-bottom: 55px;
+    }
+
+    &__slider-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__slider-wrapper {
+        width: 100%;
+        display: block;
+    }
+
+    &__carousel {
+        width: 100%;
+    }
+}
