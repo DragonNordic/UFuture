@@ -34,6 +34,10 @@
 
         &__nav {
             flex-direction: row;
+
+            & .nav__item:first-child {
+                margin: 1rem 0;
+            }
         }   
     }
 
