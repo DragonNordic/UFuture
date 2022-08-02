@@ -2009,6 +2009,9 @@ img {
   .footer__nav {
     flex-direction: row;
   }
+  .footer__nav .nav__item:first-child {
+    margin: 1rem 0;
+  }
 }
 .footer__nav-section {
   display: flex;
